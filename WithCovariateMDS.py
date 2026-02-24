@@ -250,7 +250,7 @@ class WithCovariateMDS:
             print(f"Residual Sigma (Standard):  {self.std_sigma:.4f}")
             print("-" * 110)
 
-            # 通常MDSの距離行列のみ出力
+            # MDS without covariate distance matrix
             dist_std = squareform(pdist(self.std_X))
             print("\n[A] Standard MDS Distance Matrix (Observed Structure)")
             print(pd.DataFrame(dist_std, index=self.items, columns=self.items).round(3))
